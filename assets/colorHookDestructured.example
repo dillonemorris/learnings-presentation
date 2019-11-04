@@ -1,0 +1,28 @@
+const IndexPage = ({ data }) => {
+  const { headline, tagline, headlineButton } = data.home.edges[0].node;
+  // our useTheme Hook
+  const { primary } = useThemeColors();
+
+  return (
+    <div>
+      <h1>{headline}</h1>
+      <div>{tagline}</div>
+      <Button color={primary}>{headlineButton}</Button>
+    </div>
+  );
+};
+
+export const indexPageQuery = graphql`
+  query indexPageQuery {
+    home: allContentfulHomePage {
+      edges {
+        node {
+          id
+          headline
+          headlineButton
+          tagline
+        }
+      }
+    }
+  }
+`;

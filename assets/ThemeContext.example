@@ -1,0 +1,15 @@
+import React, { useContext } from "react";
+import { ThemeContext } from "styled-components";
+import Button from "../../components/Button";
+
+const MyDeeplyNestedComponent = () => {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <Container>
+      <Button textColor={theme.colors.primaryButtonText} text="more about me" />
+    </Container>
+  );
+};
+
+export default MyDeeplyNestedComponent;

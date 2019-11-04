@@ -1,0 +1,21 @@
+import { graphql, useStaticQuery } from "gatsby";
+
+const useThemeColors = () => {
+  const { allContentfulThemeColors } = useStaticQuery(graphql`
+    query {
+      allContentfulThemeColors {
+        edges {
+          node {
+            primary
+            secondary
+            tertiary
+          }
+        }
+      }
+    }
+  `);
+
+  return allContentfulThemeColors.edges[0].node;
+};
+
+export default useThemeColors;

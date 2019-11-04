@@ -1,0 +1,15 @@
+import React from "react";
+import { useDarkMode } from "../../hooks/useDarkMode";
+
+const Layout = ({ children }) => {
+  const [darkMode, setDarkMode] = useDarkMode();
+
+  return (
+    <Layout>
+      <Toggle onChange={() => setDarkMode(!darkMode)} />
+      {children}
+    </Layout>
+  );
+};
+
+export default Layout;

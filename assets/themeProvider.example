@@ -1,0 +1,19 @@
+import React from "react";
+import { useDarkMode } from "../../hooks/useDarkMode";
+import { ThemeProvider } from "styled-components";
+import themes from "../../styles/themes";
+
+const Layout = ({ children }) => {
+  const [darkMode, setDarkMode] = useDarkMode();
+
+  const theme = darkMode ? themes.darkTheme : themes.lightTheme;
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Toggle darkMode={darkMode} setDarkMode={setDarkMode} />
+      {children}
+    </ThemeProvider>
+  );
+};
+
+export default Layout;

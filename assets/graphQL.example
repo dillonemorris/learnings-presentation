@@ -1,0 +1,25 @@
+const IndexPage = ({ data }) => {
+  const { headline, tagline, headlineButton } = data.home.edges[0].node;
+  return (
+    <div>
+      <h1>{headline}</h1>
+      <div>{tagline}</div>
+      <Button>{headlineButton}</Button>
+    </div>
+  );
+};
+
+export const indexPageQuery = graphql`
+  query indexPageQuery {
+    home: allContentfulHomePage {
+      edges {
+        node {
+          id
+          headline
+          tagline
+          headlineButton
+        }
+      }
+    }
+  }
+`;

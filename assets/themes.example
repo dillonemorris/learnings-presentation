@@ -1,0 +1,19 @@
+const themes = {
+  // light theme styles
+  lightTheme: {
+    colors: {
+      background: "#fff",
+      heading: "#1A202C"
+    }
+  },
+
+  // dark theme styles
+  darkTheme: {
+    colors: {
+      background: "#1A202C",
+      heading: "#fff"
+    }
+  }
+};
+
+export default themes;

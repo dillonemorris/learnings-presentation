@@ -1,0 +1,14 @@
+const Button = ({ color }) => {
+  return (
+    <button
+      style={{
+        backgroundColor: color ? color : "#fff",
+        color: color ? "#fff" : " #4a5568"
+      }}
+    >
+      {children}
+    </button>
+  );
+};
+
+export default Button;

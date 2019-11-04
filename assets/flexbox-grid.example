@@ -1,0 +1,27 @@
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  /* mobile */
+  width: 100%;
+
+  /* tablet */
+  @media (min-width: 500px) {
+    width: calc(50% - 40px);
+  }
+
+  /* desktop */
+  @media (min-width: 800px) {
+    width: calc(33.3333% - 40px);
+  }
+
+  /* styles unrelated to grid*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cornflowerblue;
+  padding: 1rem;
+  margin: 20px;
+}

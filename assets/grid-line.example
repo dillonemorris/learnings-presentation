@@ -1,0 +1,8 @@
+/* make element a grid container and all it's children "grid items" */
+display: grid;
+
+/* that's a lot of things */
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+/* gap between our grid items */
+grid-gap: 20px;

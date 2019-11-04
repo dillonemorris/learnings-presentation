@@ -1,0 +1,63 @@
+.template-string {
+  color: #a0adff !important;
+}
+
+.language-js {
+  font-size: 16px;
+  font-family: "IBM Plex Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  border-radius: 4px;
+  font-size: 18px !important;
+  padding: 20px;
+  color: #a3bffa !important;
+}
+
+.token.punctuation {
+  color: #00deb6 !important;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: cornflowerblue !important;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+  color: #ff7ae3 !important;
+}
+
+.token.boolean,
+.token.number,
+.token.functi {
+  color: #ff9989 !important;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+  color: #eee8a9 !important;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.2em;
+  font-size: 14px;
+  color: #eee8a9 !important;
+}
+
+/* Hide the page content until the Layout component mounts */
+.initial {
+  opacity: 0;
+}
+
+.loaded {
+  opacity: 1 !important;
+}
